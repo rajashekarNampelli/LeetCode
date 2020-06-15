@@ -3,10 +3,8 @@ package com.mycode;
 public class StringReverse {
 
   public static void main(String[] args) {
-    //
     String raj = stringReverse("Raj");
     System.out.println(raj);
-
     String raj1 = usingStringBuilder("Raj");
     System.out.println(raj1);
   }
