@@ -9,6 +9,7 @@ public class StringPalindrome {
   public void isPalindrome() {
     Assert.assertTrue(isPalindrome("TURUT"));
     Assert.assertFalse(isPalindrome("POLIDROME"));
+    Assert.assertTrue(isValidPolidrome("A man, a plan, a canal: Panama"));
   }
 
   public static boolean isPalindrome(String s) {
@@ -19,5 +20,9 @@ public class StringPalindrome {
       }
     }
     return true;
+  }
+
+  public static boolean isValidPolidrome(String s) {
+    return isPalindrome(s.replaceAll("[^A-Za-z0-9]", "").toUpperCase());
   }
 }
