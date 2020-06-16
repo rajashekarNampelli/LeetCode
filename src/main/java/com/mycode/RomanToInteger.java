@@ -30,7 +30,7 @@ public class RomanToInteger {
     int prevValue = 0;
     for (int i = 0; i < s.length(); i++) {
       Integer value = map.get(s.charAt(i));
-      if (value <= prevValue) {
+      if (prevValue >= value) {
         total += value;
       } else {
         total += value - 2 * prevValue;
